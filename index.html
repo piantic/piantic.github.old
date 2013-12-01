@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      this.DocumentUp={},DocumentUp.document=function(a){var b;"string"==typeof a?(b=a,a=null):(b=a.repo,delete a.repo),window.callback=function(b){b.status===200&&(document.open(),document.write(b.html),document.close(),a&&a.afterRender&&typeof a.afterRender=="function"&&a.afterRender())};var c=document.createElement("script");c.src="http://documentup.com/"+b,a?c.src+="?config="+encodeURIComponent(JSON.stringify(a))+"&callback=callback":c.src+="?callback=callback",document.getElementsByTagName("head")[0].appendChild(c)}
-    </script>
-    <script>
-      DocumentUp.document("fchasen/epub.js");
-    </script>
-  </head>
-  <body></body>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="demo/css/normalize.css">
+        <link rel="stylesheet" href="demo/css/main.css">
+        <link rel="stylesheet" href="demo/css/popup.css">
+
+        <script src="demo/js/libs/jquery-1.9.0.min.js"></script>
+
+        <script src="demo/js/libs/zip.min.js"></script>        
+
+        <script>
+            "use strict";
+            
+            document.onreadystatechange = function () {  
+              if (document.readyState == "complete") {
+                EPUBJS.VERSION = "0.1.6";
+                
+                EPUBJS.filePath = "demo/js/libs/";
+                EPUBJS.cssPath = "demo/css/";
+                // fileStorage.filePath = EPUBJS.filePath;
+
+                EPUBJSR.app.init("demo/moby-dick/");
+              }  
+            };
+        
+        </script>
+                
+        <!-- Render -->
+        <script src="demo/js/epub.min.js"></script>
+        
+        <!-- Hooks -->
+        <script src="demo/js/hooks.min.js"></script> 
+        
+        <!-- Reader -->
+        <script src="demo/js/reader.min.js"></script>
+        
+        <!-- File Storage -->
+        <!-- <script src="js/libs/fileStorage.min.js"></script> -->
+
+        <!-- Full Screen -->
+        <script src="demo/js/libs/screenfull.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="sidebar">
+          <div id="controls">
+            
+            <!-- <input id="search" placeholder="search"> -->
+            <a id="network"><img id="store" src="demo/img/save.png"></a>
+            <a id="setting"><img id="settings" src="demo/img/settings.png"></a>
+            <a id="fullscreen">
+              <img id="fullscreenicon" src="demo/img/fullscreen.png">
+              <img id="cancelfullscreenicon" src="demo/img/cancelfullscreen.png" style="display: none">
+            </a>
+          </div>
+          <div id="toc">
+          </div>
+          <div id="settingsPanel">
+          </div>
+            
+        </div>
+        <div id="main">
+          <div id="opener">
+            <a id="open"><img src="demo/img/menu-icon.png"></a>
+          </div>
+          <div id="titlebar">
+            <span id="book-title"></span>
+            <span id="title-seperator">&nbsp;&nbsp;–&nbsp;&nbsp;</span>
+            <span id="chapter-title"> </span>
+          </div>
+          <div id="divider"></div>
+          <div id="prev" class="arrow">‹</div>
+          <div id="area"></div>
+          <div id="next" class="arrow">›</div>
+          <div id="loader"><img src="demo/img/loader.gif"></div>
+        </div>
+    </body>
 </html>
