@@ -1,6 +1,6 @@
 Epub.js
 ================================
-
+.
 ![FuturePress Views](http://fchasen.com/futurepress/fp.png)
 
 Epub.js is a JavaScript library for rendering ePub documents in the browser, across many devices.
