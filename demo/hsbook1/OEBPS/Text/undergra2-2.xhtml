@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">Matlab을 이용한 Scalar Quantization</p>
+  </div>
+
+  <div id="ung-2.html" xml:lang="en-US">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="bodyText">이 문서는 Analog Data를 Digital Data로 변환하는 과정 중에 일어나는 Scalar Quantization에 대한 내용을 담고 있다. Quantization에는 Matlab이 사용되었다.</p>
+
+      <p class="TextTOC">본문</p>
+
+      <p class="bodyText">(내용은 수식과 그림이 많아서 생략)</p>
+
+      <p class="ximage"><img alt="qu1.png" class="image" src="../Images/qu1.png" /></p>
+
+      <p class="TextTOC">결론</p>
+
+      <p class="bodyText">24bits, 16bits, 8bits, 3bits에 대해서 quantization을 하고, 각각에 대해서 sampling rate를 48khz, 24khz, 8khz, 2khz로 바꾸어 보았다. quantization의 bits 수가 작을수록 잡음이 심하고, SQNR(dB)의 값이 작았다. 즉, 정보의 손실이 컸다. Sampling rate를 변경했을 때는 뭔가 음의 풍부함이 떨어지는 듯한 느낌을 받았고, 고음이 잘 들리지 않았다. 또한 qunatization의 레벨이 낮아도, sampling rate를 작게 하면 잡음이 덜 들렸다. 특히 wav 파일의 용량이 sampling rate에 따라서 급격한 차이를 보였다. 정보를 저장하는데 에는 한계가 있는데, 사람이 거의 느끼지 못하는 범위 내에서 quantization과 sampling rate를 적절히 조절한다면, 듣기에도 좋고 용량도 줄이는 일석이조의 효과를 볼 수 있다고 생각한다.</p>
+    </div>
+  </div>
+</body>
+</html>
