@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">Btree</p>
+  </div>
+
+  <div id="ung-3.html" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="bodyText">이 문서는 user-designed class type대해 btree를 이용하여 레코드 Append 및 Search를 수행한 결과를 담고 있다. test driver program에서 user-defined class 객체에 대해 btree를 만들고, Append와 Search 수행 시 btree와 파일의 상태를 보여준다.</p>
+
+      <p class="subtitle1">요구 사항 분석</p>
+
+      <p class="bodyText">이번 과제에서는 Btree를 만들고, Append에대한 record file내용과 btree를 보여야 한다. 마지막으로 key값에 대해 search하는 프로그램을 만들어야 한다.</p>
+
+      <p class="subtitle1">설계 하기</p>
+
+      <p class="bodyText">Btree의 기능을 크게 다음과 같이 나눌 수 있다.</p>
+
+      <p class="TextTOCsubtitle">1. Create – 새로운 Btree를 생성한다.</p>
+
+      <p class="TextTOCsubtitle">2. Insert - Btree에 새로운 레코드를 추가한다..</p>
+
+      <p class="TextTOCsubtitle">3. Remove – Btree에 있는 레코드를 제거한다..</p>
+
+      <p class="TextTOCsubtitle">4. Search – Btree에 있는 레코드를 검색한다.</p>
+
+      <p class="TextTOCsubtitle">5. Print – Btree의 node들을 따라가면서 레코드를 출력한다.</p>
+
+      <p class="bodyText">Btree는 data file과 연관된 index file을 함께 가지고 있다. 따라서 Btree class의 data를 저장, 관리 하기 위해 기존의 Buffer class와 Index class가 쓰이고, Btree의 연산을 처리하기 위해 BtreeNode라는 새로운 class가 추가된다. 즉, Btree는 protected data member로 BtreeNode와 Buffer를 가진다.(Buffer는 RecordFile class를 이용해 관리한다.)</p>
+
+      <p class="subtitle1">구현 - Create</p>
+
+      <p class="ximage"><img alt="ps1.png" class="image" src="../Images/ps1.png" /></p>
+
+      <p class="bodyText">Insert, Remove, Search, Print 생략</p>
+
+      <p class="subtitle1">Test Driver Program</p>
+
+      <p class="bodyText">좀 더 결과를 확인하기 쉽도록 기존의 Btree class를 이용하여 GUI Btree버전을 만들었다. GUI처리는 MFC를 이용해 구현 했으며, 어디까지나 결과를 좀 더 잘 보여주기 위한 용도로 만들어졌다. GUI를 처리하는 부분을 제외한 Btree부분은 위의 콘솔 버전과 동일하므로 코드 설명은 생략하도록 한다.</p>
+
+      <p class="ximage"><img alt="ps2.png" class="image" src="../Images/ps2.png" /></p>
+
+      <p class="bodyText">기본적으로 Type(Student, Book, Audio), Order, 생성 수를 적고, Btree생성 버튼을 누르면 Btree가 자동으로 생성된다. 전 과제에서 사용했던 data 자동 생성 프로그램을 이용하였다. Btree가 생성되면 기본 정보가 오른쪽 빈 공간에 표시된다. Btree 출력은 콘솔 버전에서 Print method에 해당하는 부분으로 Btree 구조를 출력한다. Search는 역시 콘솔 버전에서 만든 Search method를 응용해 만든 것이다. 검색을 원하는 key값을 넣고 Search 버튼을 누르면 그 결과를 확인 할 수 있다.</p>
+
+      <p class="TextTO">Screen shots</p>
+
+      <p class="ximage"><img alt="ps3.png" class="image" src="../Images/ps3.png" /></p>
+
+      <p class="subtitle1">결론</p>
+
+      <p class="bodyText">이 때까지 했던 과제의 총 집합이라고 생각한다. 과제1에서 만들었던 user-designed class와Buffer class, 과제2에서 만들었던 자동 생성 프로그램, 과제3에서 사용했던 Index class 등 모든 부분이 이번 Btree를 만드는데 사용되었다. 책의 코드를 참고하면서 만들었는데 생각보다 만들기가 쉽지 않았다. Insert 부분을 구현 하는데 에도 상당히 많은 버그가 생겨 고생했다. 아직도 어딘가 모르는 버그가 남아 있겠지만 시간적으로 여유가 없어 모든 버그를 잡는 건 힘들 듯싶다. 마지막으로, GUI로 Btree를 구현해 보았는데 MFC에 대한 이해가 부족하고, 시간적으로 여유가 없어서 출력 부분이 미흡하였다. 나중에 기회가 되면 제대로 된(출력과 기타 다른 부분에서) Btree를 만들어 보고 싶다.</p>
+    </div>
+  </div>
+</body>
+</html>

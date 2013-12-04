@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId" version="2.0">
+    <!-- Your OPF file was broken so Sigil was forced to create a new one from scratch. -->
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:910125c4-4fe0-478f-b564-e8eaea0a575b</dc:identifier>
+        <dc:title>Heroseo's Book</dc:title>
+        <dc:creator opf:role="aut">서영웅</dc:creator>
+        <dc:language>en</dc:language>
+        <dc:date opf:event="modification">2013-12-05</dc:date>
+        <dc:contributor opf:role="bkp">서영웅</dc:contributor>
+        <dc:publisher>heroseo</dc:publisher>
+        <meta content="0.7.0" name="Sigil version"/>
+    </metadata>
+    <manifest>
+        <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+        <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/heroseo.jpg" id="heroseo.jpg" media-type="image/jpeg"/>
+        <item href="Styles/Style0001.css" id="Style0001.css" media-type="text/css"/>
+        <item href="Text/undergra2-2.xhtml" id="undergra2-2.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/content.xhtml" id="content.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/introduction.xhtml" id="introduction.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/mon1.png" id="mon1.png" media-type="image/png"/>
+        <item href="Images/mon2.png" id="mon2.png" media-type="image/png"/>
+        <item href="Images/mon3.png" id="mon3.png" media-type="image/png"/>
+        <item href="Images/mon4.png" id="mon4.png" media-type="image/png"/>
+        <item href="Text/undergra2-1.xhtml" id="undergra2-1.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/qu1.png" id="qu1.png" media-type="image/png"/>
+        <item href="Text/undergra2-3.xhtml" id="undergra2-3.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/un1.png" id="un1.png" media-type="image/png"/>
+        <item href="Text/undergra2-4.xhtml" id="undergra2-4.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/vm1.png" id="vm1.png" media-type="image/png"/>
+        <item href="Images/vm2.png" id="vm2.png" media-type="image/png"/>
+        <item href="Images/vm3.png" id="vm3.png" media-type="image/png"/>
+        <item href="Text/undergra2-5.xhtml" id="undergra2-5.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/ds1.png" id="ds1.png" media-type="image/png"/>
+        <item href="Images/ds2.png" id="ds2.png" media-type="image/png"/>
+        <item href="Text/undergra3-1.xhtml" id="undergra3-1.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/dc1.png" id="dc1.png" media-type="image/png"/>
+        <item href="Images/dc2.png" id="dc2.png" media-type="image/png"/>
+        <item href="Images/dc3.png" id="dc3.png" media-type="image/png"/>
+        <item href="Images/dc4.png" id="dc4.png" media-type="image/png"/>
+        <item href="Text/undergra3-2.xhtml" id="undergra3-2.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/sm1.png" id="sm1.png" media-type="image/png"/>
+        <item href="Images/sm2.png" id="sm2.png" media-type="image/png"/>
+        <item href="Images/sm3.png" id="sm3.png" media-type="image/png"/>
+        <item href="Text/undergra3-3.xhtml" id="undergra3-3.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/ps1.png" id="ps1.png" media-type="image/png"/>
+        <item href="Images/ps2.png" id="ps2.png" media-type="image/png"/>
+        <item href="Images/ps3.png" id="ps3.png" media-type="image/png"/>
+        <item href="Text/undergra2m.xhtml" id="undergra2m.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/undergra3m.xhtml" id="undergra3m.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/undergra3-4.xhtml" id="undergra3-4.xhtml" media-type="application/xhtml+xml"/>
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="cover.xhtml"/>
+        <itemref idref="content.xhtml"/>
+        <itemref idref="introduction.xhtml"/>
+        <itemref idref="undergra2m.xhtml"/>
+        <itemref idref="undergra2-1.xhtml"/>
+        <itemref idref="undergra2-2.xhtml"/>
+        <itemref idref="undergra2-3.xhtml"/>
+        <itemref idref="undergra2-4.xhtml"/>
+        <itemref idref="undergra2-5.xhtml"/>
+        <itemref idref="undergra3m.xhtml"/>
+        <itemref idref="undergra3-1.xhtml"/>
+        <itemref idref="undergra3-2.xhtml"/>
+        <itemref idref="undergra3-3.xhtml"/>
+        <itemref idref="undergra3-4.xhtml"/>
+    </spine>
+    <guide/>
+</package>
