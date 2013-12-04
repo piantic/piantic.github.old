@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">디자인 패턴을 이용한 프로젝트 관리</p>
+  </div>
+
+  <div id="ung-3.html" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="ximage"><img alt="sd1.png" class="image" src="../Images/sd1.png" /></p>
+
+      <p class="subtitle1">1. Overview</p>
+
+      <p class="bodyText">디자인 패턴(Design pattern)은 건축학 및 컴퓨터 과학에서 사용되는 용어로, 특정 영역의 설계 문제를 해결하기 위해 고안된 형식적인 방법이다[1]. 이 방식은 건축가 크리스토퍼 알렉산더가 건축학 영역에서 최초로 제안하였다. 이후 컴퓨터 과학 등 여러 다른 분야에서도 디자인 패턴이라는 용어가 쓰이게 되었다. 소프트웨어 개발 방법에서 사용되는 디자인 패턴은, 프로그램 개발에서 자주 나타나는 문제를 해결하기 위한 방법 중 하나이다. 알고리즘과 같이 프로그램 코드로 바로 변환될 수 있는 형태는 아니지만, 특정한 상황에서 구조적인 문제를 해결하는 방식을 설명해 준다.</p>
+
+      <p class="bodyText">디자인 패턴은 크게 Creational, Behavioral, Structural pattern으로 분류할 수 있다. Creational pattern은 객체의 생성과 관련된 pattern들을 모아놓은 것으로, Singleton, Factory pattern 등이 있다[1]. Behavioral pattern은 특정 처리의 책임을 어느 객체에 할당하는 것이 좋은지, 알고리즘을 어느 객체에 정의하는 것이 좋은지 등을 다룬다[1]. Command, Strategy, State, Template Method, Observer pattern 등이 있다. 마지막으로 Structural pattern은 다른 기능을 가진 객체가 협력을 통해 어떤 역할을 수행할 때, 객체를 조직화시키는 일반적인 방법을 제시한다[1]. Adapter, Façade, Proxy pattern 등이 있다.</p>
+
+      <p class="subtitle1">2. Proxy Pattern 정의</p>
+
+      <p class="bodyText">Proxy Pattern은 software design pattern 중에서 structural pattern에 속하며, 다른 객체에 대한 접근을 제어하는 역할을 한다[2]. Proxy pattern은 Subject, RealSubject, Proxy로 구성된다.</p>
+
+      <p class="ximage"><img alt="sd2.png" class="image" src="../Images/sd2.png" /></p>
+
+      <p class="bodyText">일반적으로, Proxy는 RealSubject 객체에 접근하기 위한 중간 다리 역할을 한다. Proxy는 네트워크 연결, 메모리 상의 큰 객체, 파일 등에 대한 인터페이스 역할을 할 수 있다. RealSubject는 Proxy가 대표하는 실제 객체이다[1]. Subject는 RealSubject와 Proxy에 공통적인 인터페이스를 정의함으로써 RealSubject가 요청되는 곳에 Proxy를 사용할 수 있게 한다.</p>
+
+      <p class="subtitle1">3. Proxy Pattern 용도</p>
+
+      <p class="bodyText">일반적으로, Proxy Pattern은 remote proxy, virtual proxy, protection proxy, smart reference의 용도로 사용된다. Remote proxy는 다른 주소 공간에 있는 하나의 객체 대한 local representative를 제공한다[3]. 즉, Remote proxy는 객체가 다른 주소 공간에 존재한다는 사실을 은닉한다.</p>
+
+      <p class="ximage"><img alt="sd3.png" class="image" src="../Images/sd3.png" /></p>
+
+      <p class="bodyText">그림2는 일반적인 Server-Client model 기반의 통신시스템을 나타낸 것이다. Machine A와 Machine B는 서로 네트워크를 이용하여 communication을 한다고 가정하자. Machine A는 HelloClient 를 이용하여 Machine B에게 메시지를 송/수신하고, Machine B는 HelloServer를 이용하여 Machine A에게 메시지를 송/수신한다. 이 경우, HelloClient와 HelloServer는 서로에 대한 직접적인 접근이 필요하고, 이는 시스템 요소 사이에 Coupling이 높다고 할 수 있다.</p>
+
+      <p class="ximage"><img alt="sd4.png" class="image" src="../Images/sd4.png" /></p>
+
+      <p class="bodyText">그림2의 시스템에 remote proxy pattern을 적용하면 그림3과 같은 구조가 된다. 새로 바뀐 시스템에서는 HelloClient와 HelloServer는 서로의 위치를 알 필요가 없다. 즉, HelloServer가 Machine B 대신 Machine A 내부에 있거나 새로운 Machine C에 있어도 아무 상관이 없다. 이 경우, HelloClient와 HelloServer 간의 상호의존성을 없앨 수 있으므로 그림2의 시스템 보다 더 유연한 시스템을 구성할 수 있다. Virtual proxy는 상당한 비용이 소요되는 객체를 요청이 있을 때 생성하는 pattern이다[3]. Virtual proxy를 사용할 경우, 상당한 비용이 소요되는 객체를 처리하기 위한 비용을 절감할 수 있다.</p>
+
+      <p class="ximage"><img alt="sd5.png" class="image" src="../Images/sd5.png" /></p>
+
+      <p class="bodyText">예를 들어, Text 편집기에서 이미지 객체를 생성하는 것은 상당한 비용이 소요되는 operation이다. 임베디드 시스템, 혹은 모바일 장치와 같이 시스템 자원이 제한적인 환경에서는 이미지 객체를 직접적으로 생성하는 것은 상당한 부담이 된다. 이를 해결하는 한 가지 방법으로 virtual proxy pattern이 사용될 수 있다. 이미지 객체를 직접 생성하는 대신에 이미지 proxy를 생성하면 이미지 객체에 대한 비용을 줄일 수 있다. 그림4는 이미지 객체를 처리하는데 virtual proxy pattern을 적용한 결과이다.</p>
+
+      <p class="bodyText">예를 들어, Text 편집기에서 이미지 객체를 생성하는 것은 상당한 비용이 소요되는 operation이다. 임베디드 시스템, 혹은 모바일 장치와 같이 시스템 자원이 제한적인 환경에서는 이미지 객체를 직접적으로 생성하는 것은 상당한 부담이 된다. 이를 해결하는 한 가지 방법으로 virtual proxy pattern이 사용될 수 있다. 이미지 객체를 직접 생성하는 대신에 이미지 proxy를 생성하면 이미지 객체에 대한 비용을 줄일 수 있다. 그림4는 이미지 객체를 처리하는데 virtual proxy pattern을 적용한 결과이다.</p>
+
+      <p class="bodyText">Protection proxy는 Real Subject 객체 자체에 대한 접근을 제어한다. Real Subject 객체가 여러 개 존재하고 각 객체 별로 접근 제어 권한이 다를 때, protection proxy가 유용하게 사용될 수 있다.</p>
+
+      <p class="bodyText">Smart reference 는 특정 객체에 대한 단순한 접근 이외의 부가적인 작업을 수행할 때 사용한다[1]. Smart reference는 해당하는 실제 객체에 대한 참조가 더 이상 없을 경우 해당 객체를 자동으로 없앤다[1]. 이는 소프트웨어 시스템에서 잘못된 포인터의 사용으로 발생하는 버그를 줄일 수 있다.</p>
+
+      <p class="subtitle1">4. 결론</p>
+
+      <p class="bodyText">소프트웨어 시스템을 설계하는 데 있어서 특정 문제 해결에 디자인 패턴이 유용하게 사용될 수 있다. 특히, proxy pattern은 위에서 설명한 용도 외에도 방화벽, 캐싱, 동기화 등 시스템에서 중요한 문제를 해결하는 데 쓰인다.</p>
+
+      <p class="bodyText">따라서 실제 소프트웨어 설계 시proxy pattern을 사용할 때에는 proxy pattern의 정확한 이해가 수반되어야 할 것이다.</p>
+    </div>
+  </div>
+</body>
+</html>

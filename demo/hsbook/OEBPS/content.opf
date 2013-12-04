@@ -3,10 +3,10 @@
     <!-- Your OPF file was broken so Sigil was forced to create a new one from scratch. -->
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
         <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:910125c4-4fe0-478f-b564-e8eaea0a575b</dc:identifier>
-        <dc:title>1984 returns</dc:title>
+        <dc:title>Heroseo's Book</dc:title>
         <dc:creator opf:role="aut">서영웅</dc:creator>
         <dc:language>en</dc:language>
-        <dc:date opf:event="modification">2013-12-04</dc:date>
+        <dc:date opf:event="modification">2013-12-05</dc:date>
         <dc:contributor opf:role="bkp">서영웅</dc:contributor>
         <dc:publisher>heroseo</dc:publisher>
         <meta content="0.7.0" name="Sigil version"/>
@@ -14,7 +14,6 @@
     <manifest>
         <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
         <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
-        <item href="Images/heroseo.jpg" id="heroseo.jpg" media-type="image/jpeg"/>
         <item href="Styles/Style0001.css" id="Style0001.css" media-type="text/css"/>
         <item href="Text/undergra2-2.xhtml" id="undergra2-2.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/content.xhtml" id="content.xhtml" media-type="application/xhtml+xml"/>
@@ -49,6 +48,63 @@
         <item href="Images/ps3.png" id="ps3.png" media-type="image/png"/>
         <item href="Text/undergra2m.xhtml" id="undergra2m.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/undergra3m.xhtml" id="undergra3m.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/undergra3-4.xhtml" id="undergra3-4.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/sb1.png" id="sb1.png" media-type="image/png"/>
+        <item href="Images/sb2.png" id="sb2.png" media-type="image/png"/>
+        <item href="Images/sb3.png" id="sb3.png" media-type="image/png"/>
+        <item href="Images/sb4.png" id="sb4.png" media-type="image/png"/>
+        <item href="Text/undergra3-5.xhtml" id="undergra3-5.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/bm1.png" id="bm1.png" media-type="image/png"/>
+        <item href="Images/bm2.png" id="bm2.png" media-type="image/png"/>
+        <item href="Images/bm3.png" id="bm3.png" media-type="image/png"/>
+        <item href="Images/bm4.png" id="bm4.png" media-type="image/png"/>
+        <item href="Images/bm5.png" id="bm5.png" media-type="image/png"/>
+        <item href="Images/bm6.png" id="bm6.png" media-type="image/png"/>
+        <item href="Images/bm7.png" id="bm7.png" media-type="image/png"/>
+        <item href="Images/bm8.png" id="bm8.png" media-type="image/png"/>
+        <item href="Images/bm9.png" id="bm9.png" media-type="image/png"/>
+        <item href="Text/undergra3-6.xhtml" id="undergra3-6.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/uc1.png" id="uc1.png" media-type="image/png"/>
+        <item href="Images/uc2.png" id="uc2.png" media-type="image/png"/>
+        <item href="Images/uc3.png" id="uc3.png" media-type="image/png"/>
+        <item href="Text/undergra3-7.xhtml" id="undergra3-7.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/em1.png" id="em1.png" media-type="image/png"/>
+        <item href="Images/em2.png" id="em2.png" media-type="image/png"/>
+        <item href="Images/em3.png" id="em3.png" media-type="image/png"/>
+        <item href="Images/em5.png" id="em5.png" media-type="image/png"/>
+        <item href="Images/em6.png" id="em6.png" media-type="image/png"/>
+        <item href="Images/em7.png" id="em7.png" media-type="image/png"/>
+        <item href="Text/undergra4m.xhtml" id="undergra4m.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/undergra4-1.xhtml" id="undergra4-1.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/gra1.png" id="gra1.png" media-type="image/png"/>
+        <item href="Images/gra3.png" id="gra3.png" media-type="image/png"/>
+        <item href="Images/gra2.png" id="gra2.png" media-type="image/png"/>
+        <item href="Images/gra4.png" id="gra4.png" media-type="image/png"/>
+        <item href="Text/undergra4-2.xhtml" id="undergra4-2.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/sd1.png" id="sd1.png" media-type="image/png"/>
+        <item href="Images/sd2.png" id="sd2.png" media-type="image/png"/>
+        <item href="Images/sd3.png" id="sd3.png" media-type="image/png"/>
+        <item href="Images/sd4.png" id="sd4.png" media-type="image/png"/>
+        <item href="Images/sd5.png" id="sd5.png" media-type="image/png"/>
+        <item href="Text/undergra4-3.xhtml" id="undergra4-3.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/es1.png" id="es1.png" media-type="image/png"/>
+        <item href="Images/es2.png" id="es2.png" media-type="image/png"/>
+        <item href="Images/es4.png" id="es4.png" media-type="image/png"/>
+        <item href="Images/es3.png" id="es3.png" media-type="image/png"/>
+        <item href="Text/undergra4-4.xhtml" id="undergra4-4.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/r1.png" id="r1.png" media-type="image/png"/>
+        <item href="Images/r2.png" id="r2.png" media-type="image/png"/>
+        <item href="Images/r3.png" id="r3.png" media-type="image/png"/>
+        <item href="Images/r4.png" id="r4.png" media-type="image/png"/>
+        <item href="Images/r5.png" id="r5.png" media-type="image/png"/>
+        <item href="Images/r6.png" id="r6.png" media-type="image/png"/>
+        <item href="Images/r7.png" id="r7.png" media-type="image/png"/>
+        <item href="Text/etc.xhtml" id="etc.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Images/itob.jpg" id="itob.jpg" media-type="image/jpeg"/>
+        <item href="Images/battle1.png" id="battle1.png" media-type="image/png"/>
+        <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+        <item href="Images/isis.jpg" id="isis.jpg" media-type="image/jpeg"/>
+        <item href="Images/heroseo.jpg" id="heroseo.jpg" media-type="image/jpeg"/>
     </manifest>
     <spine toc="ncx">
         <itemref idref="cover.xhtml"/>
@@ -64,6 +120,17 @@
         <itemref idref="undergra3-1.xhtml"/>
         <itemref idref="undergra3-2.xhtml"/>
         <itemref idref="undergra3-3.xhtml"/>
+        <itemref idref="undergra3-4.xhtml"/>
+        <itemref idref="undergra3-5.xhtml"/>
+        <itemref idref="undergra3-6.xhtml"/>
+        <itemref idref="undergra3-7.xhtml"/>
+        <itemref idref="undergra4m.xhtml"/>
+        <itemref idref="undergra4-1.xhtml"/>
+        <itemref idref="undergra4-2.xhtml"/>
+        <itemref idref="undergra4-3.xhtml"/>
+        <itemref idref="undergra4-4.xhtml"/>
+        <itemref idref="etc.xhtml"/>
     </spine>
-    <guide/>
+    <guide>
+    </guide>
 </package>

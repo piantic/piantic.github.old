@@ -9,20 +9,109 @@
         <meta content="0" name="dtb:maxPageNumber"/>
     </head>
     <docTitle>
-        <text>1984 returns</text>
+        <text>Heroseo's Book</text>
     </docTitle>
     <navMap>
-        <navPoint id="navPoint-1" playOrder="1">
-            <navLabel>
-                <text>시작</text>
-            </navLabel>
-            <content src="Text/cover.xhtml"/>
-            <navPoint id="navPoint-2" playOrder="2">
-                <navLabel>
-                    <text>제1장</text>
-                </navLabel>
-                <content src="Text/content.xhtml"/>
-            </navPoint>
-        </navPoint>
+        <navPoint class="chapter" id="titlepage" playOrder="1">
+      <navLabel><text>Moby-Dick</text></navLabel>
+      <content src="Text/cover.xhtml"/>
+    </navPoint>
+
+    <navPoint id="chapter" playOrder="1">
+        <navLabel><text>Contents</text></navLabel>
+           <content src="Text/content.xhtml"/>
+     </navPoint>
+
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>Introduction</text></navLabel>
+           <content src="Text/introduction.xhtml"/>
+     </navPoint>
+
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>학부 - 2학년</text></navLabel>
+           <content src="Text/undergra2m.xhtml"/>
+     </navPoint>
+
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>2.1. Monte-Carlo Method의 이해</text></navLabel>
+           <content src="Text/undergra2-1.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>2.2. Matlab을 이용한 Scalar Quantization</text></navLabel>
+           <content src="Text/undergra2-2.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>2.3. WinAPI 및 유닉스 시스템을 이용한 퍼즐 놓기 게임</text></navLabel>
+           <content src="Text/undergra2-3.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>2.4. 논리 설계를 활용한 Vending Machine 구현</text></navLabel>
+           <content src="Text/undergra2-4.xhtml"/>
+     </navPoint>
+
+
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>2.5. The Tree as the ADT</text></navLabel>
+           <content src="Text/undergra2-5.xhtml"/>
+     </navPoint>
+  
+  <navPoint id="chapter" playOrder="1">
+        <navLabel><text>학부 - 3학년</text></navLabel>
+           <content src="Text/undergra3m.xhtml"/>
+     </navPoint>
+
+
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.1. DTMF Signal Tone 분석 및 PCM Sampling</text></navLabel>
+           <content src="Text/undergra2-1.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.2. 3-1 소프트웨어 설계 실험</text></navLabel>
+           <content src="Text/undergra3-1.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.3. Btree</text></navLabel>
+           <content src="Text/undergra3-2.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.4. Smart board</text></navLabel>
+           <content src="Text/undergra3-3.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.5. 방화벽(based on Windows XP) 구현</text></navLabel>
+           <content src="Text/undergra3-4.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.6. uC/OS-2를 활용한 임베디드 시스템 개발</text></navLabel>
+           <content src="Text/undergra3-5.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>3.7. 3-2 실험: 자체제작 통신 보드를 이용한 큐브 게임 제작</text></navLabel>
+           <content src="Text/undergra3-6.xhtml"/>
+     </navPoint>
+        <navPoint id="chapter" playOrder="1">
+        <navLabel><text>학부 - 4학년</text></navLabel>
+           <content src="Text/undergra4m.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>4.1. 웹 카메라를 이용한 증강현실 구현</text></navLabel>
+           <content src="Text/undergra4-1.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>4.2. 디자인 패턴을 이용한 프로젝트 관리</text></navLabel>
+           <content src="Text/undergra4-2.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>4.3. 침입자 감시 시스템</text></navLabel>
+           <content src="Text/undergra4-3.xhtml"/>
+     </navPoint>
+<navPoint id="chapter" playOrder="1">
+        <navLabel><text>4.4. 영상처리를 이용한 환자보조로봇</text></navLabel>
+           <content src="Text/undergra4-4.xhtml"/>
+     </navPoint>
+
+
+
+
     </navMap>
 </ncx>
