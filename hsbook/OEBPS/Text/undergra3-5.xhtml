@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">방화벽(based on Windows XP) 구현</p>
+  </div>
+
+  <div id="ung-3.html" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="bodyText">Window XP 기반의 방화벽으로써 방화벽의 기본기능 (모니터링, 블로킹, 세션 관리, 금지어 차단)을 구현한다. 필요시 SMS로 사용자에게 알림 문자를 전송하며 원격 제어로 기본 기능을 이용할 수 있다.</p>
+
+      <p class="subtitle1">주요 기능</p>
+
+      <p class="TextTOC">1. Traffic Monitoring</p>
+
+      <p class="bodyText">현재 네트워크에 접속중인 프로세스의 상태 정보 보기</p>
+
+      <p class="bodyText">호스트가 사용하고 있는 모든 Port 목록 출력</p>
+
+      <p class="bodyText">현재 네트워크에 접속중인 프로세스의 상태 정보 보기 - 호스트가 사용하고 있는 모든 Port 목록 출력 - 각 Port 의 네트워크 Traffic 총 송수신량을 Byte 단위로 표현 - 출력은 텍스트 또는 그래프 등을 사용하여 시각화</p>
+
+      <p class="bodyText">각 Port 의 네트워크 Traffic 총 송수신량을 Byte 단위로 표현 - 출력은 텍스트 또는 그래프 등을 사용하여 시각화</p>
+
+      <p class="TextTOC">2. Traffic Blocking</p>
+
+      <p class="bodyText">입력 받은 IP주소(필수) 및 Port 번호(선택)를 차단</p>
+
+      <p class="bodyText">Traffic Blocking 활성화/비활성화 - Port 번호가 입력되지 않은 겅우 해당 IP 주소에 대한 호스트와 수행하는 모든 Traffic 차단</p>
+
+      <p class="bodyText">Port 번호가 입력되지 않은 겅우 해당 IP 주소에 대한 호스트와 수행하는 모든 Traffic 차단</p>
+
+      <p class="TextTOC">3. TCP Session</p>
+
+      <p class="bodyText">초기값은 TCP Session 수를 0으로 설정</p>
+
+      <p class="bodyText">최대 허용 TCP Session 수 제어</p>
+
+      <p class="bodyText">현재 사용중인 TCP Session의 수를 실시간으로 감지</p>
+
+      <p class="bodyText">허용 가능한 TCP Session의 수를 초과하는 연결시도 차단</p>
+
+      <p class="TextTOC">4. 금지 단어 검출(UDP)</p>
+
+      <p class="bodyText">모든 송수신 패킷을 검사하여 입력 받은 텍스트가 포함된 패킷 버림</p>
+
+      <p class="bodyText">UDP 사용, 입력은 충분히 짧은 텍스트로 제한</p>
+
+      <p class="TextTOC">5. 원격 제어</p>
+
+      <p class="bodyText">다른 컴퓨터 시스템에서 방화벽에 접근하여 여러 기능들을 제어(원격 제어 프로그램이 따로 존재하고, 이를 통해 방화벽 시스템에 접근 가능)</p>
+
+      <p class="TextTOC">1.9. 사용자 인터페이스</p>
+
+      <p class="bodyText">- 입력 받은 IP주소(필수) 및 Port 번호(선택)를 차단 - Traffic Blocking 활성화/비활성화 - Port 번호가 입력되지 않은 겅우 해당 IP 주소에 대한 호스트와 수행하는 모든 Traffic 차단</p>
+
+      <p class="TextTOC">1.9. 사용자 인터페이스</p>
+
+      <p class="bodyText">- MFC 기반의 GUI 제공</p>
+
+      <p class="bodyText">침입 탐지 시 관리자에게 SMS 문자 전송</p>
+
+      <p class="bodyText">ActiveX 실행 환경 제공</p>
+
+      <p class="subtitle1">핵심 기능</p>
+
+      <p class="ximage"><img alt="sb1.png" class="image" src="../Images/bm1.png" /></p>
+
+      <p class="bodyText">...</p>
+
+      <p class="bodyText">생략</p>
+
+      <p class="subtitle1">시연 영상 (* 다운로드 필요)</p>
+
+      <p class="subtitle1">Screen shots</p>
+
+      <p class="ximage"><img alt="sb2.png" class="image" src="../Images/bm2.png" /></p>
+
+      <p class="ximage"><img alt="sb3.png" class="image" src="../Images/bm3.png" /></p>
+
+      <p class="ximage"><img alt="sb4.png" class="image" src="../Images/bm4.png" /></p>
+
+      <p class="ximage"><img alt="sb5.png" class="image" src="../Images/bm5.png" /></p>
+
+      <p class="ximage"><img alt="sb6.png" class="image" src="../Images/bm6.png" /></p>
+
+      <p class="ximage"><img alt="sb7.png" class="image" src="../Images/bm7.png" /></p>
+
+      <p class="ximage"><img alt="sb8.png" class="image" src="../Images/bm8.png" /></p>
+
+      <p class="ximage"><img alt="sb9.png" class="image" src="../Images/bm9.png" /></p>
+    </div>
+  </div>
+</body>
+</html>
