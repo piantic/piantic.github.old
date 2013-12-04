@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName" id="#toc_marker-2-1">Monte-Carlo Method의 이해</p>
+  </div>
+
+  <div id="ung-2.html" xml:lang="en-US">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="bodyText">이 문서는 Monte-Carlo Method에 대한 개념 및 활용에 대한 내용을 담고 있다. pi값을 Monte-Carlo Method를 적용하여 구하고, exp(-x^2)의 적분 값을 확인해본다. 또한 확률분포에 대해서도 Monte-Carlo Method의 개념으로 해결하는 방법을 제시한다. 각 문제들을 해결하는 데에는 Matlab이 사용되었다.</p>
+
+      <p class="TextTOC">Monte-Carlo Method의 개념</p>
+
+      <p class="bodyText">Monte-Carlo Method을 간단히 얘기하면 예측과 추정, 그리고 리스크 분석에 유용하게 사용할 수 있는 난수 생성기라고 할 수 있다. Monte-Carlo Simulation은 모나코 도박 도시의 이름으로부터 유래된 것으로 리스크를 예측하고 분석할 수 있는 강력한 방법이다. 변수의 관계가 확실하여 예측치를 정확하게 찾을 수 있는 deterministic model(확정모형)과는 달리, 우리가 얻고자 하는 많은 부분은 결과를 정확하게 예측할 수 없는 stochastic model(확률모형)이다. 일반적으로 확정모형에서는 analytical solution(분석적 해)을 찾는 것이 가능하다. 그러나 deterministic model에서는 분석적인 방법으로 해를 찾는 것이 불가능 한 경우가 많다. 이 경우에는 수치적(numerical)으로 일련의 난수를 반복적으로 발생해서 시뮬레이션을 하면 답을 찾을 수 있는데 이를 Monte-Carlo Simulation이라 한다.</p>
+
+      <p class="TextTOC">Monte-Carlo Method의 응용</p>
+
+      <p class="bodyText">Monte-Carlo Method을 간단히 얘기하면 예측과 추정, 그리고 리스크 분석에 유용하게 사용할 수 있는 난수 생성기라고 할 수 있다. Monte-Carlo Simulation은 모나코 도박 도시의 이름으로부터 유래된 것으로 리스크를 예측하고 분석할 수 있는 강력한 방법이다. 변수의 관계가 확실하여 예측치를 정확하게 찾을 수 있는 deterministic model(확정모형)과는 달리, 우리가 얻고자 하는 많은 부분은 결과를 정확하게 예측할 수 없는 stochastic model(확률모형)이다. 일반적으로 확정모형에서는 analytical solution(분석적 해)을 찾는 것이 가능하다. 그러나 deterministic model에서는 분석적인 방법으로 해를 찾는 것이 불가능 한 경우가 많다. 이 경우에는 수치적(numerical)으로 일련의 난수를 반복적으로 발생해서 시뮬레이션을 하면 답을 찾을 수 있는데 이를 Monte-Carlo Simulation이라 한다.</p>
+
+      <p class="TextTOC">본문</p>
+
+      <p class="TextTOCsubtitle">Monte-Carlo Method를 이용한 pi값 구하기</p>
+
+      <p class="ximage"><img alt="mon1.png" class="image" src="../Images/mon1.png" /></p>
+
+      <p class="bodyText">그림 1에서 반지름이 1cm인 원의 넓이는 'π'가 되고, 1사분면 위에 그려진 한 변의 길이가 1cm인 정사각형 안에 포함되는 사분원의 넓이는 'π/4'가 된다. 이 정사각형 안에 무작위로 점을 찍었을 때 사분원 안에 점이 있을 확률과 이 원이 정사각형에서 차지하는 면적의 비율은 동일하다.</p>
+
+      <p class="ximage"><img alt="mon2.png" class="image" src="../Images/mon2.png" /></p>
+
+      <p class="bodyText">'π'의 값은 다음과 같이 구한다.</p>
+
+      <p class="ximage"><img alt="mon3.png" class="image" src="../Images/mon3.png" /></p>
+
+      <p class="bodyText">점의 수를 50개, 100개, 1,000개, 10,000개, 100,000개, 1,000,000개, 10,000,000개로 차츰 늘려갈 때 계산된 pi값이다. 찍은 점의 수가 많을수록 더 정확한 값을 구할 수 있다.</p>
+
+      <p class="ximage"><img alt="mon4.png" class="image" src="../Images/mon4.png" /></p>
+
+      <p class="TextTOCsubtitle">결과 분석</p>
+
+      <p class="bodyText">Monte-Carlo Method의 가장 기본적인 예라고 생각한다. 점의 수가 많을수록 실제 pi값에 근사한 결과가 나왔다. Monte-Carlo Method의 특성인 통계자료가 많을수록, 또 입력 값의 분포가 고를수록 결과의 정밀성이 보장된다는 사실을 알 수 있다.</p>
+
+      <p class="TextTOCsubtitle">Monte-Carlo Method를 이용한 2.2 적분값 구하기</p>
+
+      <p class="bodyText">내용 생략</p>
+
+      <p class="TextTOCsubtitle">확률 분포 구하기</p>
+
+      <p class="bodyText">내용 생략</p>
+
+      <p class="TextTOC">결론</p>
+
+      <p class="bodyText">Monte-Carlo Method의 개념과 활용뿐만 아니라 그 예로 pi값, e^(-x^2 )의 적분값, 그리고 확률 분포를 구해보았다. 점의 개수, 즉 Simulation에 쓰이는 데이터가 많을수록 더 정확한 수치를 얻을 수 있었다. Monte-Carlo Method의 개념을 정확히 이해 하고 있고, 이를 우리 주변의 사건들에 적용할 수 있는 능력을 가지고 있다면 이론적으로, 혹은 계산의 어려움으로 접근이 힘든 여러 가지 문제들을 쉽게 해결 할 수 있다고 생각한다. 그런 점에서 Monte-Carlo Method는 충분히 배울 가치가 있고, 유용한 방법이다.</p>
+    </div>
+  </div>
+</body>
+</html>
