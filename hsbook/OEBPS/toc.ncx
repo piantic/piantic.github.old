@@ -13,11 +13,7 @@
     </docTitle>
     <navMap>
         <navPoint class="chapter" id="titlepage" playOrder="1">
-<<<<<<< .merge_file_JG9dnY
-      <navLabel><text>Moby-Dick</text></navLabel>
-=======
       <navLabel><text>Heroseo</text></navLabel>
->>>>>>> .merge_file_3GscGY
       <content src="Text/cover.xhtml"/>
     </navPoint>
 

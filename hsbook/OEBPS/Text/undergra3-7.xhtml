@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">3-2 실험: 자체제작 통신 보드를 이용한 큐브 게임 제작</p>
+  </div>
+
+  <div id="ung-3.html" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="ximage"><img alt="드1.png" class="image" src="../Images/em1.png" /></p>
+
+      <p class="bodyText">컴퓨터 공학실험II의 프로젝트 주제는 보드간의 시리얼 통신을 이용한 큐브 게임이다. 게임을 진행하면서 채팅이 가능하도록 만들어져 있다.</p>
+
+      <p class="subtitle1">1. Overview</p>
+
+      <p class="bodyText">프로젝트는 크게 두 부분으로 나뉜다. 실제 데이터의 이동과 통신을 담당하는 보드 부분과, 사용자에게 게임 화면을 보여주고 보낼 데이터를 분석/정리하는 어플리케이션 부분이다. 어플리케이션은 PC에서 실행되며, 보드의 구동을 담당하는 프로그램은 EEPROM에 적재되어 보드에서 실행된다. 이 두 개의 프로그램은 PCI9030보드를 통해 데이터나 시그널을 주고 받는다.</p>
+
+      <p class="ximage"><img alt="em2.png" class="image" src="../Images/em2.png" /></p>
+
+      <p class="bodyText">게임은 일단 두 명의 사용자가 접속되는 것으로부터 시작한다. 게임의 승리 조건은 누가 먼저 큐브를 완성하느냐이다.</p>
+
+      <p class="subtitle1">2. Board</p>
+
+      <p class="bodyText">실제 통신을 담당한다. 보드는 크게 ARM과 DPRAM, EEPROM정도로 나눌 수 있는데, EEPROM은 사용자가 만든 프로그램이 적재되어있으며 ARM에서는 그 프로그램을 읽어 실행한다. DRPAM은 보드 간 통신할 데이터가 저장되는 공간으로 사용되는데 받는 데이터와 보내는 데이터의 사용 공간이 분리되어 있다. 데이터를 보내야 할 때에는 PC에서 board로 인터럽트를 보낸다. 인터럽트가 발생하면 board는 보낼 데이터를 DPRAM에 저장한 후 상대방 board에 전송한다. 데이터를 받을 때에는 board에서 PC로 인터럽트를 보내 DPRAM에 저장된 데이터를 PC가 읽을 수 있도록 한다.</p>
+
+      <p class="subtitle1">3. 진행 과정</p>
+
+      <p class="TextTOC">3.1 PCI9030과 드라이버(3주차)</p>
+
+      <p class="bodyText">PCI9030 보드를 시스템에 장착한 후 제공된 테스트 프로그램을 실행해 보는 것으로 Linux Device Driver에 대한 이해와 Device Driver를 통해 PCI 9030 보드를 제어하는 방법을 터득하였다. PCI 9030 이란 PLX Tech 에서 만든 PCI Controller Chipset SMARTarget 을 이용한 I/O Accelerator로 이번 프로젝트에서는 PC와 보드간의 연결을 담당한다. 디바이스 드라이버란 장치를 직접적으로 다루는 소프트웨어로 Ubuntu에 적재한 드라이버는 PCI 9030을 다루는 역할을 한다.</p>
+
+      <p class="ximage"><img alt="em3.png" class="image" src="../Images/em3.png" /></p>
+
+      <p class="TextTOC">3.2 JTAG과 Multi-ICE의 사용</p>
+
+      <p class="bodyText">PCI9030 보드를 시스템에 장착한 후 제공된 테스트 프로그램을 실행해 보는 것으로 Linux Device Driver에 대한 이해와 Device Driver를 통해 PCI 9030 보드를 제어하는 방법을 터득하였다. PCI 9030 이란 PLX Tech 에서 만든 PCI Controller Chipset SMARTarget 을 이용한 I/O Accelerator로 이번 프로젝트에서는 PC와 보드간의 연결을 담당한다. 디바이스 드라이버란 장치를 직접적으로 다루는 소프트웨어로 Ubuntu에 적재한 드라이버는 PCI 9030을 다루는 역할을 한다.</p>
+
+      <p class="bodyText">JTAG는 embedded system 개발 시 디버깅하기 위한 장비이며 Multi-ICE는 Multi In-Circuit Emulator의 약자로서, JTAG 기반의 디버거 장비이다. 당시 실험에서는 완성된 보드를 가지고 있지 않았으므로 간단한 core를 가진 ARM 플랫폼인 Evaluator를 사용하였는데 Evaluator에 있는 7-Segment에 숫자를 표시하는 실험으로 목적을 달성하였다.</p>
+
+      <p class="TextTOC">3.3 EEPROM, ARM</p>
+
+      <p class="bodyText">EEPROM에 프로그램을 적재하여 ARM을 동작시키는 법을 터득하였다. 이 실험에서는 GPIO에 연결된 LED를 깜박거리게 함으로서 ARM과 EEPROM이 제대로 동작하는지 확인할 수 있었다. EEPROM에 적재한 프로그램을 실행시키기 위해서는 ARM의 System Memory Map의 이해가 필수적이다. 뒤에서도 계속해서 쓰이는 내용이므로 꼭 알고 있어야 하는 내용이라고 할 수 있다.</p>
+
+      <p class="TextTOC">3.4 DPRAM, ARM</p>
+
+      <p class="bodyText">EEPROM에 프로그램을 작성하여 DPRAM에 값을 쓰고, 쓴 값을 실제로 읽어서 올바른 값일 경우 LED가 두 개 켜지도록 하였다. 틀린 값이 읽혀지면 LED가 하나 켜지도록 하였다. 우리가 사용하는 DPRAM 영역이 2kb이므로 2048개의 숫자를 넣었다가 꺼내는 것으로 DPRAM을 테스트 하였다.</p>
+
+      <p class="ximage"><img alt="em5.png" class="image" src="../Images/em5.png" /></p>
+
+      <p class="TextTOC">3.5 Logic Analyzer</p>
+
+      <p class="bodyText">LCD 모듈의 기본적인 구조를 이해하고, EEPROM에 data Write Test Program 을 작성, LCD를 통하여 출력해 본 후 Logic Analyzer로 출력이 정확하게 이루어지는지 확인해 보았다.</p>
+
+      <p class="TextTOC">3.6 Interrupt</p>
+
+      <p class="bodyText">인터럽트란 현재 실행되고 있는 모든 동작들 보다 우선하는 동작을 실행시킬 수 있는 시그널의 일종이라고 할 수 있다. 인터럽트 관련한 실험에서는 PCI 9030에서 인터럽트가 발생하면 DPRAM에 미리 써 놓은 데이터를 연결된 CLCD에 출력하는 실험과, 보드에서 인터럽트가 발생하였을 때 PCI9030에서 그 인터럽트를 읽어 그에 대응하는 인터럽트 핸들러를 실행하는 실험 두 가지를 행하였다. 이는 프로젝트에서 데이터를 송신할 때 유용하게 사용된다.</p>
+
+      <p class="TextTOC">3.7 QT (채팅)</p>
+
+      <p class="bodyText">Qt란 Trolltech 회사가 개발한 GUI Toolkit이다. C++로 만들어졌으며 그 구조는 MFC와 비슷하다. 이 실험은 간단한 Serial 통신에 관한 실험을 마친 후 보드의 펌웨어와 PC의 어플리케이션을 통합한 첫 번째 과정이었다. 보드에서는 Serial Port를 이용하여 상대방의 보드와 데이터 송/수신을 행하며, PC에서는 DPRAM에 데이터를 읽고 쓰는 동작과 적절한 인터럽트 관련 동작을 수행하여 채팅이 이루어 질 수 있게 하였다.</p>
+
+      <p class="subtitle1">게임 진행 화면</p>
+
+      <p class="ximage"><img alt="em6.png" class="image" src="../Images/em6.png" /></p>
+
+      <p class="ximage"><img alt="em7.png" class="image" src="../Images/em7.png" /></p>
+
+      <p class="subtitle1">결론</p>
+
+      <p class="bodyText">3학년 2학기 Embedded System Based ARM 제작은 이제까지 경험해 보지 못했던 신선한 실험이었다. 물론 이전에도 System Software 교과목에서 Assembly Coding을 하거나 Data Communication 교과목에서 Hardware Coding을 해보았지만, 직접 Processor를 제어하고 그에 맞게 납땜을 하는 등 Embedded System을 제작하는 것은 이번이 처음이었다. 각 주차 별로 JTAG과 Multi-ICE, Logic Analyzer 등을 이용한 Hardware Debugging Technique을 배웠지만, 여전히 Software에서의 debugging보다는 훨씬 힘들다는 사실을 알았다. 그리고 Debugging의 어려움뿐만 아니라, Software/Hardware Develop Environment의 차이점에 대해 어렴풋이나마 이해할 수 있는 그런 시간이 되었다. PCI9030 Device의 제어방법, JTAG을 이용한 ARM Debugging, Board 납땜, ARM Register Value 결정, Board Testing, Debugging by Logic Analyzer, Interrupt Handle, QT Programming 모두 이번 실험을 진행하며 배운 내용인데, 모두 완전하게 이해하지는 못하지만 Hardware로 진로를 결정한다면 모두가 꼭 필요한 수업이었던 것 같다.</p>
+    </div>
+  </div>
+</body>
+</html>

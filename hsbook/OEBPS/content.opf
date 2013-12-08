@@ -6,11 +6,7 @@
         <dc:title>Heroseo's Book</dc:title>
         <dc:creator opf:role="aut">서영웅</dc:creator>
         <dc:language>en</dc:language>
-<<<<<<< .merge_file_EJr3EV
-        <dc:date opf:event="modification">2013-12-05</dc:date>
-=======
         <dc:date opf:event="modification">2013-12-09</dc:date>
->>>>>>> .merge_file_59YB8U
         <dc:contributor opf:role="bkp">서영웅</dc:contributor>
         <dc:publisher>heroseo</dc:publisher>
         <meta content="0.7.0" name="Sigil version"/>

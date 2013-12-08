@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Heroseo's Book</title>
+  <link href="../Styles/Style0001.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="Basic-Text-Frame">
+    <p class="AppName">영상처리를 이용한 환자보조로봇</p>
+  </div>
+
+  <div id="ung-3.html" xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <div class="Basic-Text-Frame">
+      <p class="subtitle1" id="toc_marker-1">요약</p>
+
+      <p class="bodyText">이 문서는 ‘영상처리를 이용한 환자보조로봇’이라는 임베디드 소프트웨어 시스템에 대한 내용을 담고 있다. 이 시스템은 거동이 불편한 환자가 멀리 있는 물체를 손 쉽게 잡도록 고안된 것으로 크게 손 동작 인식, 물체 인식, 로봇 제어 부분으로 나누어 진다.</p>
+
+      <p class="subtitle1">1. Overview</p>
+
+      <p class="bodyText">영상처리와 로봇을 합쳐서 거동이 불편한 환자에게 물건을 가져다 주는 시스템을 고안하였다. 환자는 근처에 있는 카메라에 손으로 명령을 내릴 수 있다. 자기가 원하는 물건에 대해서 로봇에게 신호를 보내면 로봇이 그 물건을 찾아서 환자에게 가져다 준다.</p>
+
+      <p class="ximage"><img alt="r1.png" class="image" src="../Images/r1.png" /></p>
+
+      <p class="bodyText">거동이 불편한 환자를 보조할 수 있는 로봇 시스템을 제작한다. 사용자의 편의를 위해 영상처리를 이용하며 물건을 찾는 모든 동작을 로봇이 스스로 할 수 있도록 한다. 이를 위해서는 환자의 손 동작을 인식할 수 있는 부분, 로봇이 환자가 원하는 물건을 구별하는 부분, 로봇이 물건을 잡아 환자에게 가져올 수 있는 부분이 필요하다.</p>
+
+      <p class="subtitle1">2. 시스템 구성</p>
+
+      <p class="bodyText">시스템은 아래처럼 크게 세 부분으로 구성된다.</p>
+
+      <p class="ximage"><img alt="r2.png" class="image" src="../Images/r2.png" /></p>
+
+      <p class="bodyText">Part1에 해당하는 손동작 인식 부분은 시스템 전체를 제어하는 역할을 한다. 기본적으로 명령은 모두 환자의 손동작에 의해 일어나기 때문이다. Part2는 물체 인식 부분이다. 환자가 원하는 물건을 가져오기 위해서는 카메라로 물체의 위치를 파악하고, 실제로 그 물체가 맞는지 구별할 수 있어야 한다. 실제 로봇을 구동하는 부분은 Part3에 해당한다. 물건의 위치를 파악하면 물건이 있는 곳으로 가야 한다. 물건이 환자가 원하는 것이면 물건을 들어올릴 수 있어야 한다. 이런 모든 로봇의 동작을 제어하는 부분이 필요하다.</p>
+
+      <p class="ximage"><img alt="r3.png" class="image" src="../Images/r3.png" /></p>
+
+      <p class="bodyText">Part1, Part2, 마지막으로 Part3은 크게 제어 파트와 동작 파트로 나눌 수 있다. 왜냐하면 Part1을 제외한 Part2와 Part3은 실제 로봇에 해당하기 때문이다. 위의 전체 구성도에서 물체 인식 부분이 Part2에 해당하고 TETRIX(로봇 제작에 사용된 kit)가 Part3에 해당한다. 로봇제작에 사용된 TETRIX에서 카메라를 바로 사용하지 못하므로 따로 노트북을 이용하여 물건을 찾고 그에 따라 로봇을 구동하였다.</p>
+
+      <p class="subtitle1">3. 시스템 기능</p>
+
+      <p class="TextTOC">3.1 손동작 인식</p>
+
+      <p class="bodyText">영상에서 손 부분을 찾고 손동작을 해석하여 어떤 물체를 환자가 원하는지 해석한다. 아래는 실제 프로그램에서 손 영역을 검출, 손동작을 찾은 것이다.</p>
+
+      <p class="ximage"><img alt="r4.png" class="image" src="../Images/r4.png" /></p>
+
+      <p class="TextTOC">3.2 물체 인식</p>
+
+      <p class="bodyText">주변에 있는 물체의 위치를 찾고 실제 환자가 원하는 물건인지 검사하는 부분이다. 로봇이 멀리 있을 때는 물체의 대략적인 위치를 색깔 정보를 이용하여 찾는다. 아래는 색 정보를 이용하여 파란색 물체를 찾아낸 화면이다.</p>
+
+      <p class="ximage"><img alt="r5.png" class="image" src="../Images/r5.png" /></p>
+
+      <p class="bodyText"></p>
+
+      <p class="bodyText">색깔 정보를 바탕으로 물체를 찾고 난 후, 로봇이 물체의 근처로 왔을 때는 SIFT 알고리즘을 적용하여 명령으로 들어온 물체가 맞는지 검사한다. 해당하는 물체가 맞으면 물건을 인식할 수 있고 이를 이용하여 로봇을 제어한다.</p>
+
+      <p class="ximage"><img alt="r6.png" class="image" src="../Images/r6.png" /></p>
+
+      <p class="TextTOC">3.3 로봇 제어</p>
+
+      <p class="bodyText">TETRIX를 이용하여 제작한 로봇을 제어하는 부분이다. 로봇에서 사용하는 TETRIX 모터, 서브 모터, sonar 센서 등을 조절하여 원하는 도작을 하도록 API를 만들었다. 아래는 실제 로봇의 사진이다.</p>
+
+      <p class="ximage"><img alt="r7.png" class="image" src="../Images/r7.png" /></p>
+
+      <p class="bodyText">기본동작으로 앞, 뒤로 이동, 회전이 있다. 로봇의 앞에 있는 sonar 센서는 물체의 거리를 감지하는 역할을 한다. 센서 옆의 서브모터 2개는 물체를 집는 역할을 담당한다.</p>
+
+      <p class="subtitle1">시스템 알고리즘 설명</p>
+
+      <p class="bodyText">생략</p>
+
+      <p class="subtitle1">시연 동영상</p>
+
+      <p class="bodyText">생략</p>
+    </div>
+  </div>
+</body>
+</html>
