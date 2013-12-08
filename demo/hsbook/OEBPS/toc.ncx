@@ -13,7 +13,7 @@
     </docTitle>
     <navMap>
         <navPoint class="chapter" id="titlepage" playOrder="1">
-      <navLabel><text>Moby-Dick</text></navLabel>
+      <navLabel><text>Heroseo</text></navLabel>
       <content src="Text/cover.xhtml"/>
     </navPoint>
 
