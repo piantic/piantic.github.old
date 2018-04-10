@@ -6,9 +6,9 @@
         <dc:title>Wedding Invitation</dc:title>
         <dc:creator opf:role="aut">Heroseo</dc:creator>
         <dc:language>en</dc:language>
-        <dc:date opf:event="modification">2018-04-10</dc:date>
+        <dc:date opf:event="modification">2018-04-11</dc:date>
         <dc:contributor opf:role="bkp">Heroseo</dc:contributor>
-        <dc:publisher>heroseo</dc:publisher>
+        <dc:publisher>Heroseo</dc:publisher>
         <meta content="0.7.0" name="Sigil version"/>
     </metadata>
     <manifest>
@@ -17,7 +17,7 @@
         <item href="Styles/Style0001.css" id="Style0001.css" media-type="text/css"/>
         <item href="Text/Location.xhtml" id="Location.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/content.xhtml" id="content.xhtml" media-type="application/xhtml+xml"/>
-        <item href="Text/Introduction.xhtml" id="introduction.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/Introduction.xhtml" id="Introduction.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Invitation.xhtml" id="Invitation.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Epilogue.xhtml" id="Epilogue.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Prologue.xhtml" id="Prologue.xhtml" media-type="application/xhtml+xml"/>
