@@ -3,11 +3,11 @@
     <!-- Your OPF file was broken so Sigil was forced to create a new one from scratch. -->
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
         <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:910125c4-4fe0-478f-b564-e8eaea0a575b</dc:identifier>
-        <dc:title>Heroseo's Book</dc:title>
-        <dc:creator opf:role="aut">서영웅</dc:creator>
+        <dc:title>Wedding Invitation</dc:title>
+        <dc:creator opf:role="aut">Heroseo</dc:creator>
         <dc:language>en</dc:language>
         <dc:date opf:event="modification">2018-04-10</dc:date>
-        <dc:contributor opf:role="bkp">서영웅</dc:contributor>
+        <dc:contributor opf:role="bkp">Heroseo</dc:contributor>
         <dc:publisher>heroseo</dc:publisher>
         <meta content="0.7.0" name="Sigil version"/>
     </metadata>
@@ -17,7 +17,7 @@
         <item href="Styles/Style0001.css" id="Style0001.css" media-type="text/css"/>
         <item href="Text/Location.xhtml" id="Location.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/content.xhtml" id="content.xhtml" media-type="application/xhtml+xml"/>
-        <item href="Text/introduction.xhtml" id="introduction.xhtml" media-type="application/xhtml+xml"/>
+        <item href="Text/Introduction.xhtml" id="introduction.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Invitation.xhtml" id="Invitation.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Epilogue.xhtml" id="Epilogue.xhtml" media-type="application/xhtml+xml"/>
         <item href="Text/Prologue.xhtml" id="Prologue.xhtml" media-type="application/xhtml+xml"/>
@@ -36,7 +36,7 @@
     <spine toc="ncx">
         <itemref idref="cover.xhtml"/>
         <itemref idref="content.xhtml"/>
-        <itemref idref="introduction.xhtml"/>
+        <itemref idref="Introduction.xhtml"/>
         <itemref idref="Prologue.xhtml"/>
         <itemref idref="Invitation.xhtml"/>
         <itemref idref="Location.xhtml"/>
